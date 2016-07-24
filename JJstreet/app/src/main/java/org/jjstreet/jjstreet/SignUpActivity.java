@@ -17,6 +17,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText etPassword;
     private EditText etPhone;
     private EditText etPasswordConfirm;
+    private EditText etPersonName;
     private Button btnDone;
     private Button btnCancel;
 
@@ -27,8 +28,9 @@ public class SignUpActivity extends AppCompatActivity {
 
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
-        etPhone = (EditText) findViewById(R.id.etPhone);
+        etPhone = (EditText)    findViewById(R.id.etPhone);
         etPasswordConfirm = (EditText) findViewById(R.id.etPasswordConfirm);
+        etPersonName = (EditText) findViewById(R.id.etPersonName);
         btnDone = (Button) findViewById(R.id.btnDone);
         btnCancel = (Button) findViewById(R.id.btnCancel);
 

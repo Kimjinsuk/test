@@ -5,13 +5,9 @@
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.jjstreet.jjstreet.SignUpActivity"
     android:background="@color/colorBackGround"
-    android:weightSum="1">
+    >
 
     <ProgressBar
         android:id="@+id/signup_progress"
@@ -28,73 +24,131 @@
         android:layout_gravity="center"
         android:fillViewport="true">
 
+        <!-- 전체 틀 레이아웃 -->
         <LinearLayout
-        android:orientation="vertical"
-        android:layout_gravity="center_vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
 
-
+        <!--  sign up 제목 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="match_parent"
                 android:text="@string/action_sign_up"
-                android:id="@+id/textView2"
-                android:layout_gravity="top"
-                android:layout_marginBottom="80dp" />
+                android:textSize="40dp"
+                android:textColor="#000000"/>
+        </LinearLayout>
 
-            <AutoCompleteTextView
+        <!-- 입력의 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="50dp">
+
+
+            <!-- 입력항목들의 레이아웃 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:baselineAligned="true"
+                android:layout_gravity="center_vertical"
+                >
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:text="E-mail : "
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left"
+                    android:text="비밀번호 :"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left"
+                    android:text="비밀번호 확인 :"
+                    android:textSize="14dp"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left"
+                    android:text="Name :"
+                    android:textSize="25dp"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left"
+                    android:text="PHONE :"
+                    android:textSize="23dp"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+            <!-- editText들의 레이아웃 -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:hint="@string/prompt_email"
-                android:id="@+id/etEmail" />
-
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:hint="@string/prompt_password"
-        android:id="@+id/etPassword" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:hint="@string/again_password"
-        android:id="@+id/etPasswordConfirm" />
-
-        </android.support.design.widget.TextInputLayout>
-
-
+                android:orientation="vertical"
+                >
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:ems="10"
-                android:id="@+id/etPhone"
-                android:hint="PHONE"
-                 />
+                android:layout_height="40dp"
+                android:inputType="textEmailAddress"
+                android:id="@+id/etEmail" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:inputType="textPassword"
+                    android:id="@+id/etPassword"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:inputType="textPassword"
+                    android:id="@+id/etPasswordConfirm"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:inputType="textPersonName"
+                    android:id="@+id/etPersonName"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:inputType="number"
+                    android:id="@+id/etPhone"/>
+            </LinearLayout>
+        </LinearLayout>
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
+
+        <!-- 버튼들의 레이아웃 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             >
 
             <Button
@@ -108,19 +162,18 @@
                 android:clickable="true" />
 
 
-                <Button
-                    android:id="@+id/btnCancel"
-                    android:text="Cancel"
-                    style="?android:textAppearanceSmall"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorButtonBackGround"
-                    android:clickable="true" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/btnCancel"
+                android:text="Cancel"
+                style="?android:textAppearanceSmall"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorButtonBackGround"
+                android:clickable="true" />
 
         </LinearLayout>
-
+    </LinearLayout>
     </ScrollView>
 
 
